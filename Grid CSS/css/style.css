@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.grid div{
+    border: 1px solid rgb(88, 56, 56);
+    background-color: chocolate;
+}
+
+.grid{
+    padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: antiquewhite;
+}
+
+/* Тут ми починаємо робити сітку. Розкоментовуйте і закоментовуйте по черзі.
+Початок роботи з грід є властивість display: grid.
+*/
+/*
+.grid{
+    display: grid;
+}
+*/
+/*grid-template-columns: 100px 200px 100px; -задається розмір і кількість колонок
+grid-template-rows: 100px 100px 100px;-задається розмір і кількість рядів.
+Розкоментуйте і побачите як воно працює*/
+/* 
+.grid{  
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+*/
+
+/* 
+grid-column-gap: -задається розмір між колонками
+grid-row-gap: -задається розмір між  рядків
+короткий запис:grid-gap: 15px 10px
+якщо розмір однаковий, то grid-gap: 15px*/
+/* 
+.grid{
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+*/
+/* ширина при адаптивній верстці може записуватися в fr, він забирає вільне місце.
+можна поєднувати fr i px*/
+/* 
+.grid{  
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 100px 200px 150px;
+    grid-gap: 15px;
+}*/
+
+/*repeat - дозволяє задавати кількість колонок і розмір більш коротким записом*/
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-template-rows: repeat(3, 100px);
+}
+*/
+/*minmax - ф-ція, задає мін і макс значення
+minmax(100px, auto) - підстраює під контент комірку */
+/*
+.grid{
+    display: grid;
+    grid-template-columns: minmax(100px, 500px) 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+*/
+/*grid-auto-flow вибудовує контент або в рядок або в стовпчик*/
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-template-rows: repeat(3, 100px);
+    grid-auto-flow: column;
+}
+*/
+/* Неявна сітка - сітка яка не вказана, значення grid-auto-rows та 
+    grid-auto-columns визначають розміри неявної частини сітки */
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: repeat(2, 100px);
+    grid-auto-rows: 200px;
+    
+}
+*/
+/* auto-fill та auto-fit допомогають вибудувати на ширину рядку елементи,
+проте auto-fill залишає вільне місце в кінці рядку, а auto-fit розтягує на всю ширину рядка */
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));  
+    grid-template-rows: repeat(3, 100px);
+}
+*/
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));  
+    grid-template-rows: repeat(3, 100px);
+}
+*/
+
+/* grid-column-start, grid-column-end: (grid-column)
+вказує початок лінії і по яку лінію колонки буде комірка
+grid-row-start, grid-row-end (grid-row)
+вказує початок лінії і по яку лінію рядку буде комірка */
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 15px;
+}
+
+.grid > div:nth-child(1){
+    grid-column-start: 2 ;
+    grid-column-end: 4;
+    grid-column: 2/4;
+}
+
+.grid > div:nth-child(2){
+    grid-row-start:1 ;
+    grid-row-end: 3;
+    grid-row: 1/3;
+}
+*/
+
+/*justify-items вирівнює по горизонталі, align-items - по вертикалі
+start end cener stretch - значення.
+Для цього прикладу вставте текст
+"Lorem ipsum dolor sit amet consectetur adipisicing", після просмотру удаліть текст.
+наприклад в 5 комірку */
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 150px);  
+    grid-template-rows: minmax(50px, auto) minmax(50px, auto);
+
+    justify-items: center;
+    align-items: center ;
+}
+*/
+/*justify-self та align-self вирівнювання по осям одного елементу з сітки */
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 150px);  
+    grid-template-rows: minmax(50px, auto) minmax(50px, auto);
+}
+
+.grid > div:nth-child(2){
+    justify-self: start ;
+    align-self:start ;
+}
+*/
+/*grid-template - спрощений запис сітки */
+/*
+.grid{
+    display: grid;
+    grid-template: repeat(3, 100px)/repeat(4, 150px);
+}
+*/
+ /*Продовження дивіться на сторінці index2.html  */

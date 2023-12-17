@@ -1,0 +1,49 @@
+
+
+.grid{
+    padding: 10px 15px;
+    background-color: coral;
+    border: 1px solid crimson;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+
+}
+
+.grid div{
+    border: 1px solid rgb(88, 56, 56);
+    background-color: chocolate;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-gap: 15px;
+    /* Визначаємо структуру побудови*/
+    grid-template-areas:
+        "header header"   
+        "sidebar main"
+        "sidebar footer";
+    height: 100vh;
+}
+
+/* Визначаємо кожну структурну одиницю побудови*/
+/*
+.header{
+    grid-area: header;
+}
+
+.aside{
+    grid-area: sidebar;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+*/

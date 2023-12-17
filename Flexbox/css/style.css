@@ -1,0 +1,207 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1c1b21;
+    color: white;
+    font-size: 55px;
+}
+
+.container {
+    border: 10px solid #452eb8;
+    }
+
+.item{
+    background: #1c1b21;
+    border: 1px solid #452eb8;
+    text-align: center;
+    font-style: #e4e1f5;
+    padding: 10px;
+}
+
+/* Тут ми починаємо писати стилі для flex. 
+Якщо потрібно побачити дію стилів, розкоментуйте один коментарій.
+Якщо стилі закоментовані окремо, окремо, по одному і розкоментовуйте і назад закоментовуйте*/ 
+
+
+/* flex починає працювати коли надаємо флекс-контейнеру display: значення flex (або inline-flex). */
+
+.container {
+    display: flex;    
+}
+
+
+/* flex-direction вказує основний напрямок. 
+    row - зліва направо, row-reverse - зправа наліво, 
+    column - зверху вниз, column-reverse - знизу вверх.
+    Розкоментуйте по черзі стилі знизу  */
+
+/*
+.container {
+    flex-direction: row ;
+}
+*/
+
+/*
+.container {
+    flex-direction: row-reverse ;
+}
+*/
+
+/*
+.container {
+    flex-direction: column ;
+}
+*/
+
+/*
+.container {
+    flex-direction: column-reverse;
+}
+*/
+
+/* flex-wrap: wrap дає можливість переносити елементи в інші рядки*/
+
+.container{
+    flex-wrap: wrap;
+}
+/*
+.item{
+    width: 100px;
+}*/
+
+/* order задає порядок флекс-елементів 
+(по замовчуванню всі елементи мають значення 0)*/
+
+/*
+.item4{
+    order: 1;
+}*/
+
+/* Позиціювання. Відносно головної осі: justify-content має значення:
+baseline, center, right, left, flex-start, flex-end, space-between, space-around, space-evenly */
+
+/*
+.container{
+    justify-content: space-evenly;
+}*/
+
+/* Так воно працює при основній осі column - зверху вниз, 
+але для цього потрібно додавати висоту*/
+
+/*
+.container{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}*/
+
+/*Позиціювання. Відносно вторинної осі: align-items, має значення:
+center, flex-end, flex-start, stretch, baseline  */
+
+/*
+.container{
+    height: 100vh;
+    justify-content:space-around;
+    align-items:flex-start;
+    
+}
+
+.item{
+    width: calc(30%);
+}*/
+
+/*Позиціювання. Відносно один одного: align-content, має значення:
+center, flex-end, flex-start, space-between, space-around, space-evenly, baseline  */
+
+/*
+.container{
+    height: 100vh;
+    justify-content:space-around;
+    align-content:flex-end;
+}*/
+
+/*Позиціювання. Відносно один до інших: align-self, має значення:
+center, flex-end, flex-start, space-between, space-around, space-evenly, baseline  */
+
+/*
+.container{
+    height: 100vh;
+    align-items:flex-start;
+}
+.item2 {
+    align-self: center;
+}*/
+
+/*властивості flex - властивості flex-елементів*/
+
+/*
+.item{
+    flex: 1;
+}
+
+.item2{
+    flex: 2;
+}*/
+
+/*властивості flex - flex-basis (основна ширина елемента), 
+flex-grow(коефіцієнт зайняття вільного місця), flex-shrink(коефіцієнт стиснення елементу)*/
+/*
+.item{
+    flex-basis: 80px; 
+    flex-grow: 1;
+}
+
+.item2{
+    flex-grow: 0;
+}
+
+.item3{
+    flex-grow: 2;
+}
+
+.item4{
+    flex-shrink: 2;
+}*/
+
+/*коротка запис flex - flex-grow, flex-shrinkб flex-basis (1 2 300px)*/
+
+
+
+/* flex-direction + flex-basis + flex-grow */
+/*
+.container{
+    flex-direction: column;
+    height: 100vh;
+}
+
+.item{
+    flex-basis: 200px; 
+    flex-grow:1;
+}
+*/
+
+/* gap - відступи між елементами в сітці*/
+/*
+.item{
+    flex: 1 1 calc(100%/3 - 20px*2/3);
+}
+
+.container{
+    gap: 20px;
+}
+*/
+
+/*margin: auto - забирає весь вільний простір для margin*/
+/*
+.item2{
+    margin-right: auto;
+}
+
+.item4{
+    margin-right: auto;
+}
+*/
